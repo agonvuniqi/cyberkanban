@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-app-fb364": {
+      "hosting": {
+        "angularfbapp": [
+          "kanban-app-fb364"
+        ]
+      }
+    }
+  }
+}

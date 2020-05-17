@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "angularfbapp",
+      "public": "dist/angularfbapp",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
