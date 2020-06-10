@@ -53,7 +53,7 @@ export class BoardService {
     getUserBoards() {
       return this.afAuth.authState.pipe(
         switchMap(user => {
-          //Handles if there is a user object, that means the user is signed in
+          //Handles if there is a user object, that means the user is signed in, and thus will order the tasks by priority that they have set
           if (user) {
             return this.db
               .collection<Board>('boards', ref => 
@@ -61,6 +61,7 @@ export class BoardService {
               )
               .valueChanges({ idField: 'id' });
           } else {
+            // Returns empty array if user isn't logged in
             return [];
           }
         })
