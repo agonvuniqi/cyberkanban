@@ -1,3 +1,9 @@
+// Smoothes the transition between each task within a board
+
+.inner-card {
+  margin: 5px 0;
+  cursor: pointer;
+}
 .cdk-drag-placeholder {
     opacity: 0.5;
   }
@@ -10,6 +16,7 @@
     transition: transform 300ms ease;
   }
   
+  // Prest color classes which use identical class names to the task label property within firestore db 
   .blue { background: #71deff; color: black; }
   .green { background: #36e9b6; color: black;  }
   .yellow { background: #fffc44; color: black; }
