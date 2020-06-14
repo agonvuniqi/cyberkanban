@@ -1,21 +1,29 @@
-// Smoothes the transition between each task within a board
+
+.outer-card {
+  margin: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 10px;
+  background: #212121;
+}
 
 .inner-card {
   margin: 5px 0;
   cursor: pointer;
 }
 .cdk-drag-placeholder {
-    opacity: 0.5;
+  opacity: 0.5;
+}
+
+// Smoothes the transition between each task within a board
+  .tasks.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 300ms ease;
   }
-  
+
   .cdk-drag-animating {
     transition: transform 300ms ease;
   }
-  
-  .cdk-drop-list-dragging .cdk-drag {
-    transition: transform 300ms ease;
-  }
-  
+
   // Prest color classes which use identical class names to the task label property within firestore db 
   .blue { background: #71deff; color: black; }
   .green { background: #36e9b6; color: black;  }

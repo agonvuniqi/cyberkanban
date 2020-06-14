@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { moveItemInArray, CdkDragDrop } from '@angular/cdk/drag-drop';
 import { BoardService } from '../board.service';
 import { TaskDialogComponent } from '../dialogs/task-dialog.component';
@@ -10,7 +10,7 @@ import { Task } from '../board.model'
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss']
 })
-export class BoardComponent implements OnInit {
+export class BoardComponent {
   @Input() board;
 
   constructor(private boardService: BoardService, public dialog: MatDialog) { }
@@ -39,7 +39,8 @@ export class BoardComponent implements OnInit {
       }
     })
   }
-  ngOnInit(): void {
-  }
 
+  handleDelete() {
+    this.boardService.deleteBoard(this.board.id);
+  }
 }
