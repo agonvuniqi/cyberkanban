@@ -21,6 +21,8 @@ export class BoardComponent implements OnInit {
     this.boardService.updateTasks(this.board.id, this.board.tasks);
   }
 
+  /*
+  Creates a new task and also updates existing tasks by passing in an optional Task input/id variables  */
   openTaskDialog(task?: Task, idx?: number): void {
     const newTask = { label: 'purple' };
     const dialogRef = this.dialog.open(TaskDialogComponent, {
