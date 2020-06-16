@@ -33,9 +33,9 @@ import { BoardService } from '../board.service';
 
       <app-delete-button
       (delete)="handleTaskDelete()"
-      *ngIf-"!data.isNew"
-      >
-      </app-delete-button>
+      *ngIf="!data.isNew"
+      ></app-delete-button>
+
     </div>
   `,
   styleUrls: ['./dialog.component.scss'],
@@ -45,7 +45,7 @@ export class TaskDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<TaskDialogComponent>,
-    private ps: BoardService,
+    private bs: BoardService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
@@ -54,7 +54,7 @@ export class TaskDialogComponent {
   }
 
   handleTaskDelete() {
-    this.ps.removeTask(this.data.boardId, this.data.task);
+    this.bs.removeTask(this.data.boardId, this.data.task);
     this.dialogRef.close();
   }
 }
