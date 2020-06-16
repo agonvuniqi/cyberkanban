@@ -1,0 +1,7 @@
+<mat-nav-list role="list">
+    <h3 mat-subheader>Customers (Fake Data)</h3>
+
+    <mat-list-item *ngFor="let cust of customers | async" [routerLink]="cust.id" role="listItem">
+        <h3>{{ cust.name }}</h3> 
+    </mat-list-item>
+</mat-nav-list>
