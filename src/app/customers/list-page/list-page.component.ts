@@ -8,7 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./list-page.component.scss']
 })
 export class ListPageComponent implements OnInit {
-
+  customers;
   constructor(private seo: SeoService, private db: AngularFirestore ) { }
 
   ngOnInit() {
