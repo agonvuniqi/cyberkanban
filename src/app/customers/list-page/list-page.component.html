@@ -1,6 +1,6 @@
 <mat-nav-list role="list">
-    <mat-list-item *ngFor="let cust of customers | async" routerLink="cust.id" role="listitem">
-        <mat-icon mat-list-icon>account_box</mat-icon>
-        <h3>{{ cust.name }}</h3> 
+    <mat-list-item *ngFor="let cust of customers | async" [routerLink]="cust.id" role="listitem">
+            <mat-icon style="vertical-align: middle;" mat-list-icon>account_box</mat-icon>
+            <h3>{{ cust.name }}</h3> 
     </mat-list-item>
 </mat-nav-list>

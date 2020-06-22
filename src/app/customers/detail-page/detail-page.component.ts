@@ -33,6 +33,7 @@ export class DetailPageComponent implements OnInit {
             title: cust.name,
             description: cust.bio,
             image: cust.image,
+            position: cust.position,
           }))
       )
   }

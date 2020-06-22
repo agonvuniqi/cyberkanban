@@ -11,7 +11,7 @@
 <mat-card *ngIf="customer | async as cust">
     <mat-card-header>
       <mat-card-title>{{ cust.name }}</mat-card-title>
-      <mat-card-subtitle>Customer Details</mat-card-subtitle>
+      <mat-card-subtitle>{{ cust.position }}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="cust.image" />
     <mat-card-content>

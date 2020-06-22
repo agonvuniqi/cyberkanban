@@ -9,7 +9,7 @@ export class SeoService {
 
   constructor(private title: Title, private meta: Meta, private router: Router) { }
 
-  generateTags({ title = '', description = '', image = ''}){
+  generateTags({ title = '', description = '', image = '', position = ''}){
     this.title.setTitle(title);
     this.meta.addTags([
       //Open Graph
@@ -17,6 +17,7 @@ export class SeoService {
       { name: 'og:title', content: title },
       { name: 'og:description', content: description },
       { name: 'og:image', content: image },
+      { name: 'og:position', content: position },
       // Twitter Card
       { name: 'twitter:card', content: 'summary'},
       { name: 'twitter:site', content: '@testingTwitter'}
