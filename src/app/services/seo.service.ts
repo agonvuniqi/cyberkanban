@@ -13,13 +13,13 @@ export class SeoService {
     this.title.setTitle(title);
     this.meta.addTags([
       //Open Graph
-      { name: 'og:url', content: `https://firestarts.fireship.io${this.router.url}`},
+      { name: 'og:url', content: `https://localhost:4200/${this.router.url}`},
       { name: 'og:title', content: title },
       { name: 'og:description', content: description },
       { name: 'og:image', content: image },
       // Twitter Card
       { name: 'twitter:card', content: 'summary'},
-      { name: 'twitter:site', content: '@fireship_dev'}
+      { name: 'twitter:site', content: '@testingTwitter'}
     ]);
   }
 }
