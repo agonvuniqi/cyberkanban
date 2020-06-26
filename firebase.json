@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "angularfbapp",
-      "public": "dist/angularfbapp",
+      "public": "/dist/angularfbapp",
       "ignore": [
         "firebase.json",
         "**/.*",
