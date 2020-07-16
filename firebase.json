@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "cyberkanban",
-    "public": "dist/angularfbapp/browser",
+    "public": "dist/cyberkanban/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

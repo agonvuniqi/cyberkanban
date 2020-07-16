@@ -1,5 +1,5 @@
 {
-  "name": "angularfbapp",
+  "name": "cyberkanban",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,15 +10,15 @@
     "e2e": "ng e2e",
     "serve": "node serve-script",
     "build:prerender": "npm run build:client-and-server-bundles && node prerender.js",
-    "serve:prerender": "http-server dist/browser -c-1",
+    "serve:prerender": "http-server dist/cyberkanban/browser -c-1",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "build:ssr_bak": "npm run build:client-and-server-bundles && npm run compile:server",
-    "serve:ssr_bak": "node dist/server",
-    "build:client-and-server-bundles": "ng build --prod && ng run angularfbapp:server:production",
-    "dev:ssr": "ng run angularfbapp:serve-ssr",
-    "serve:ssr": "node dist/server/main.ts",
-    "build:ssr": "ng build --prod && ng run angularfbapp:server:production",
-    "prerender": "ng run angularfbapp:prerender"
+    "serve:ssr_bak": "node dist/cyberkanban/server",
+    "build:client-and-server-bundles": "ng build --prod && ng run cyberkanban:server:production",
+    "dev:ssr": "ng run cyberkanban:serve-ssr",
+    "serve:ssr": "node dist/cyberkanban/server/main.js",
+    "build:ssr": "ng build --prod && ng run cyberkanban:server:production",
+    "prerender": "ng run cyberkanban:prerender"
   },
   "private": true,
   "dependencies": {

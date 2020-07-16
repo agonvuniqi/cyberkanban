@@ -13,7 +13,7 @@ const { renderModuleFactory } = require('@angular/platform-server');
 const {
     AppServerModuleNgFactory,
     LAZY_MODULE_MAP
-} = require(`./dist/server/main.js`);
+} = require(`./dist/cyberkanban/server/main`);
 
 const fs = require('fs-extra');
 
@@ -29,7 +29,7 @@ const ROUTES = [
 (async function() {
     enableProdMode();
     // Get the app index
-    const views = 'dist/browser';
+    const views = 'dist/cyberkanban/browser';
     const index = await fs.readFile(join(views, 'index.html'), 'utf8');
 
     // Loop over each route that is being prerendered

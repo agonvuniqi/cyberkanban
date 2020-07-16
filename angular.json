@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularfbapp": {
+    "cyberkanban": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularfbapp/browser",
+            "outputPath": "dist/cyberkanban/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularfbapp:build"
+            "browserTarget": "cyberkanban:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularfbapp:build:production"
+              "browserTarget": "cyberkanban:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularfbapp:build"
+            "browserTarget": "cyberkanban:build"
           }
         },
         "test": {
@@ -114,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularfbapp:serve"
+            "devServerTarget": "cyberkanban:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularfbapp:serve:production"
+              "devServerTarget": "cyberkanban:serve:production"
             }
           }
         },
@@ -129,7 +129,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angularfbapp/server",
+            "outputPath": "dist/cyberkanban/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "externalDependencies": [
@@ -158,21 +158,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "angularfbapp:build",
-            "serverTarget": "angularfbapp:server"
+            "browserTarget": "cyberkanban:build",
+            "serverTarget": "cyberkanban:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularfbapp:build:production",
-              "serverTarget": "angularfbapp:server:production"
+              "browserTarget": "cyberkanban:build:production",
+              "serverTarget": "cyberkanban:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "angularfbapp:build:production",
-            "serverTarget": "angularfbapp:server:production",
+            "browserTarget": "cyberkanban:build:production",
+            "serverTarget": "cyberkanban:server:production",
             "routes": [
               "/"
             ]
@@ -184,5 +184,5 @@
       }
     }
   },
-  "defaultProject": "angularfbapp"
+  "defaultProject": "cyberkanban"
 }

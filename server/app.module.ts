@@ -7,7 +7,7 @@ import { AppServerModule } from '../src/main.server';
   imports: [
     AngularUniversalModule.forRoot({
       bootstrap: AppServerModule,
-      viewsPath: join(process.cwd(), 'dist/angularfbapp/browser')
+      viewsPath: join(process.cwd(), 'dist/cyberkanban/browser')
     })
   ]
 })
