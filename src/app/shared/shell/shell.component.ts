@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-shell',
@@ -16,6 +17,6 @@ export class ShellComponent {
       shareReplay() //Subscribing to the observable multiple times using the async pipe and we want to make sure all the subscriptions are listening to the same most recent value of this observable
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public afAuth: AngularFireAuth) {}
 
 }

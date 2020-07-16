@@ -18,7 +18,6 @@ constructor(
     state: RouterStateSnapshot
     ): Promise<boolean> {
       const user = await this.afAuth.currentUser;
-      console.log(!!user);
       const isLoggedIn = !!user;
 
       if (!isLoggedIn) {
