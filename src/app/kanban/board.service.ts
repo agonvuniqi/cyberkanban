@@ -12,7 +12,7 @@ export class BoardService {
 
   constructor(private  afAuth: AngularFireAuth, private db: AngularFirestore) { }
 
-  // Creates a new board for the current user
+  // Creates a default board for the current user
   async createBoard(data: Board) {
     const user = await this.afAuth.currentUser;
     return this.db.collection('boards').add({

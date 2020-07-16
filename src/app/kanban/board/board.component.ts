@@ -24,6 +24,7 @@ export class BoardComponent {
   /*
   Creates a new task and also updates existing tasks by passing in an optional Task input/id variables  */
   openTaskDialog(task?: Task, idx?: number): void {
+    // Sets default option color to purple + task description to blank
     const newTask = { label: 'purple' };
     const dialogRef = this.dialog.open(TaskDialogComponent, {
       width: '500px',
@@ -31,13 +32,15 @@ export class BoardComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.boardService.updateTasks(this.board.id, [ ...this.board.tasks, result.task ]);
-      } else {
-        const update = this.board.tasks;
-        update.splice(result.idx, 1, result.task);
-        this.boardService.updateTasks(this.board.id, this.board.tasks)
+        if (result.isNew) {
+          this.boardService.updateTasks(this.board.id, [ ...this.board.tasks, result.task ]);
+        } else {
+          const update = this.board.tasks;
+          update.splice(result.idx, 1, result.task);
+          this.boardService.updateTasks(this.board.id, this.board.tasks)
+        }
       }
-    })
+    });
   }
 
   handleDelete() {
