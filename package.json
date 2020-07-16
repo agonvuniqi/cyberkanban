@@ -16,7 +16,7 @@
     "serve:ssr_bak": "node dist/server",
     "build:client-and-server-bundles": "ng build --prod && ng run angularfbapp:server:production",
     "dev:ssr": "ng run angularfbapp:serve-ssr",
-    "serve:ssr": "node dist/server/main.js",
+    "serve:ssr": "node dist/server/main.ts",
     "build:ssr": "ng build --prod && ng run angularfbapp:server:production",
     "prerender": "ng run angularfbapp:prerender"
   },
